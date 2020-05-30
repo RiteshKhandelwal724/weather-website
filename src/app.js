@@ -10,7 +10,7 @@ app.set("view engine", "hbs");
 app.set("views", viewsDir);
 hbs.registerPartials(partialsDir);
 app.use(express.static(publicDir));
-
+console.log("changes made")
 app.get("", (req, res) => {
   res.render("index", {
     name: "Ritesh",
