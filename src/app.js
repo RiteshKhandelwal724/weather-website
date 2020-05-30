@@ -6,6 +6,7 @@ const app = express();
 const publicDir = path.join(__dirname, "../public");
 const viewsDir = path.join(__dirname, "../template/views");
 const partialsDir = path.join(__dirname, "../template/partials");
+const port=process.env.PORT||3000
 app.set("view engine", "hbs");
 app.set("views", viewsDir);
 hbs.registerPartials(partialsDir);
@@ -60,6 +61,6 @@ app.get("*", (req, res) => {
     title: "404 Page not found",
   });
 });
-app.listen(8080, () => {
+app.listen(port, () => {
   console.log("Hey ,this has started");
 });
